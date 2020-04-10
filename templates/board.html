@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>게시판</title>
+</head>
+<body>
+    <a href="/write">글쓰러가기</a>
+    <br>
+    <fieldset>
+        <div>
+            번호 제목 내용 글쓴이
+        </div>
+    {% for board in boards %}
+    {{board.id}} {{board.title}} {{board.content}} {{board.name}}<br>
+    {% endfor %}
+
+    </fieldset>
+</body>
+</html>
